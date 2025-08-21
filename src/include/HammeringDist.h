@@ -7,6 +7,10 @@
 #include <fstream>
 
 class HammeringDist{
+private:
+    //Matrix for the Data
+    std::vector<std::string> data;
+
 public:
     int calculate(std::string *a, std::string *b){
         if (a->length() == b->length()){
@@ -22,25 +26,6 @@ public:
         }
 
         return distanceCount;
-    }
-
-    void readFile(std::string fileLocation){
-        std::cout << "!!!!!!" << std::endl;
-
-        std::fstream fin;
-
-        fin.open(fileLocation);
-
-        std::vector<std::string> row;
-        std::string word;
-        std::string line;
-
-        while (fin >> word){
-            row.clear();
-            
-            std::cout << word << "\n";
-
-        }
     }
 };
 
